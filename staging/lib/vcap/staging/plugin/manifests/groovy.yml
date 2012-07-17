@@ -1,0 +1,16 @@
+---
+name: "groovy"
+runtimes:
+  - "groovy":
+      version: "1.8.6"
+      description: "Groovy 1.8.6"
+      executable: "groovy"
+  - "groovy2":
+      description: "Groovy 2.0.0"
+      version: "2.0.0"
+      executable: "groovy"
+      default: true
+detection:
+  - "*.groovy": true
+
+# vim: filetype=yaml

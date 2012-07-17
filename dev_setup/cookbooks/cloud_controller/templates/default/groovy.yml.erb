@@ -1,0 +1,20 @@
+---
+name: "groovy"
+runtimes:
+  - groovy:
+      version: '1.8.6'
+      description: 'Groovy'
+      executable: <%= File.join(node[:groovy][:path], "bin", "groovy") %>
+      environment:
+        path: /usr/bin:<%= File.join(node[:groovy][:path], "bin") %>:$PATH
+  - groovy2:
+      version: '2.0.0'
+      description: 'Groovy'
+      executable: <%= File.join(node[:groovy][:path], "bin", "groovy") %>
+      environment:
+        path: /usr/bin:<%= File.join(node[:groovy][:path], "bin") %>:$PATH
+      default: true
+app_servers:
+detection:
+  - "*.groovy": '.'
+staged_services:
